@@ -5,9 +5,8 @@ let listeNoms = document.getElementById('listeNoms');
 console.log(listeNoms);
 
 buttonAfficher.addEventListener('click', function () {
-    if (inputNom.value === '') {
-        alert('Nom obligatoire !');
-        return;
+    while (inputNom.value === '') {
+        inputNom.value = prompt('Nom obligatoire !');
     }
 
     listeNoms.innerHTML += '<li>' + inputNom.value + '</li>';
